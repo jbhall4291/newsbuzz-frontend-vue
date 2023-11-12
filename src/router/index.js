@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import ArticlesView from '../views/ArticlesView.vue'
+import SingleArticleView from '../views/SingleArticleView.vue'
+import { getArticleById } from '../utils/api'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,7 +10,13 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: ArticlesView
+    },
+    {
+      path: '/articles/:article_id',
+      name: 'singleArticle',
+      component: SingleArticleView,
+      props: (route) => ({ articleId: route.params.article_id }),
     },
     {
       path: '/about',
