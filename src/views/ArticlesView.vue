@@ -1,8 +1,15 @@
 <template>
-  <div class="bg-gray-300 flex justify-center">
-    <ol class="gap-1 w-full lg:w-1/2 flex flex-col justify-center items-center mt-1">
-      <ArticleCard v-for="article in articles" :key="article.id" :article="article" />
-    </ol>
+  <div>
+    <div v-if="articles">
+      <div class="bg-gray-300 flex justify-center">
+        <ol class="gap-1 w-full lg:w-1/2 flex flex-col justify-center items-center mt-1">
+          <ArticleCard v-for="article in articles" :key="article.id" :article="article" />
+        </ol>
+      </div>
+    </div>
+
+    <p v-else class="bg-black text-white">Loading...</p>
+
   </div>
 </template>
 

@@ -66,7 +66,7 @@
 
 
         </div>
-        <p v-else>Loading...</p>
+        <p class="bg-black text-white" v-else>Loading...</p>
     </div>
 </template>
   
