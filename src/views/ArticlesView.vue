@@ -1,15 +1,65 @@
 <template>
-  <div>
-    <div v-if="articles">
-      <div class="bg-gray-300 flex justify-center">
-        <ol class="gap-1 w-full lg:w-1/2 flex flex-col justify-center items-center mt-1">
+  <div class="flex p-6  bg-[#dae0e6] justify-center">
+    <div class="flex flex-col  w-[640px] gap-4">
+      <div class="bg-white p-4 rounded-lg">COMPONENT PLACEHOLDER Create post</div>
+      <div class="bg-white p-4 rounded-lg">COMPONENT PLACEHOLDER icons for best, hot, new, top sorting</div>
+      <!-- <div class="bg-gray-300 flex justify-center"> -->
+
+      <div v-if="articles">
+        <ol class="gap-4  flex flex-col justify-center items-center mt-1 w-[640px]">
           <ArticleCard v-for="article in articles" :key="article.id" :article="article" />
         </ol>
       </div>
+
+
+      <!-- </div> -->
+
+      <!-- <p v-else class="bg-black text-white">Loading...</p> -->
     </div>
+    <div class=" text-black ml-12 w-[310px] flex flex-col gap-4">
+      <div class="flex flex-col gap-4 bg-white p-4">
+        <p>Home</p>
+        <p>Your personal Reddit frontpage. Come here to check in with your favorite communities.</p>
+        <hr />
+        <button class="bg-blue-300 text-white rounded-xl">Create Post</button>
+        <button class="text-blue-300 bg-white rounded-xl border-blue-300 border-2">Create Community</button>
+      </div>
 
-    <p v-else class="bg-black text-white">Loading...</p>
+      <div class="bg-white">Recent Posts</div>
 
+      <div class="flex flex-col gap-4 bg-white p-4 text-sm">
+        <div class="flex">
+          <div class="flex flex-col w-1/2 ">
+            <p>User Agreement</p>
+            <p>Privacy Policy</p>
+          </div>
+          <div class="flex flex-col w-1/2">
+            <p>Content Policy</p>
+            <p> Moderator Code Of Conduct</p>
+          </div>
+
+        </div>
+        <hr />
+        <div class="flex">
+          <div class="flex flex-col w-1/2">
+            <p>English</p>
+            <p>Français</p>
+            <p>Italiano</p>
+          </div>
+          <div class="flex flex-col w-1/2">
+            <p>Deutsch</p>
+            <p>Español</p>
+            <p>Português</p>
+          </div>
+        </div>
+        <hr />
+        Johnny Hall © 2023. All rights reserved.
+
+
+
+      </div>
+
+    </div>
   </div>
 </template>
 

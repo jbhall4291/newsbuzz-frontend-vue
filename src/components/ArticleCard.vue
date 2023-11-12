@@ -1,7 +1,8 @@
 <template>
   <li>
-    <RouterLink :to="'/articles/' + article.article_id" class="bg-white border-gray-700 border-[1px] rounded-md grid grid-cols-[60px,1fr]">
-      <div class="col-span-1 bg-gray-200 rounded-l-md flex flex-col items-center justify-start p-2">
+    <RouterLink :to="'/articles/' + article.article_id"
+      class="bg-white border-[#cccccc] hover:border-[#8a8a8b] border-[1px] rounded-md grid grid-cols-[40px,600px]">
+      <div class="col-span-1 bg-[#f8f9fa] rounded-l-md flex flex-col items-center justify-start p-2">
         <button>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="green" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round" width="24" height="24">
@@ -20,16 +21,17 @@
         </button>
       </div>
 
-      <div class="col-span-1 col-start-2 p-2 "> 
-        <h1><b>{{ article.topic }}</b> · Posted by {{ article.author }} {{ convertTimeAndDate(article.created_at) }}</h1>
-        <h2>{{ article.title }}</h2>
-        <img class="w-2/3" :src="article.article_img_url" />
-        <p>{{ article.comment_count }} Comments</p>
+      <div class="col-span-1 col-start-2 ">
+        <h1 class="p-1.5"><b>{{ article.topic }}</b> · Posted by {{ article.author }} {{ convertTimeAndDate(article.created_at) }}</h1>
+        <h2 class="p-1.5">{{ article.title }}</h2>
+        <img class="m-auto" :src="article.article_img_url" />
+
+        <p class="p-1.5">{{ article.comment_count }} Comments</p>
 
 
       </div>
     </RouterLink>
-    </li>
+  </li>
 </template>
   
   

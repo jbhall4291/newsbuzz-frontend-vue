@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 import ArticlesView from '../views/ArticlesView.vue'
 import SingleArticleView from '../views/SingleArticleView.vue'
 import { getArticleById } from '../utils/api'
