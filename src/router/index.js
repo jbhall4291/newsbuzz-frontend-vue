@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import ArticlesView from '../views/ArticlesView.vue'
 import SingleArticleView from '../views/SingleArticleView.vue'
+import CreatePost from '../views/CreatePostView.vue'
 import { getArticleById } from '../utils/api'
 
 const router = createRouter({
@@ -16,6 +17,11 @@ const router = createRouter({
       name: 'singleArticle',
       component: SingleArticleView,
       props: (route) => ({ articleId: route.params.article_id }),
+    },
+    {
+      path: '/submit',
+      name: 'submitPost',
+      component: CreatePost,
     },
     // {
     //   path: '/about',

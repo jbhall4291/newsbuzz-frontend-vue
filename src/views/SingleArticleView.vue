@@ -24,7 +24,7 @@
                     <p class="">{{ article.title }}</p>
                     <p>X Close</p>
                 </div>
-                <div class="flex bg-blue-400 px-28 py-8">
+                <div class="flex  px-28 py-8">
                     <div v-if="article" :article="article" class=" justify-center flex  w-[800px] lg:w-[740px] ">
                         <div class=" bg-white  rounded-md grid grid-cols-[48px,680px]">
                             <div class="col-span-1  rounded-l-md flex flex-col items-center justify-start p-2">

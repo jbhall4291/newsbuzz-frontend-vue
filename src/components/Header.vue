@@ -22,6 +22,9 @@
 <script setup>
 import { ref } from 'vue'
 
+
+
+
 const searchTerm = ref("")
 
 const handleSearch = () => {  

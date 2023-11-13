@@ -6,7 +6,7 @@
             <form @submit.prevent="handleSubmitComment">
                 <textarea rows="5" placeholder="What are your thoughts?" class="border-black border-2 rounded-md p-2 w-full"
                     v-model="commentText"></textarea>
-                <button class="bg-blue-400" type="submit">Submit</button>
+                <button class="" type="submit">Submit</button>
             </form>
         </div>
     </div>
@@ -15,10 +15,15 @@
 <script setup>
 import { ref } from 'vue';
 import { postComment } from '../utils/api';
+import { useAppStore } from '../stores/appStore'
+
+const appStore  = useAppStore()
 
 const commentText = ref(null);
 
+
+
 const handleSubmitComment = () => {
-    postComment(21, commentText.value, 'cooljmessy');
+    postComment(21, commentText.value, appStore.loggedInUser);
 };
 </script>
