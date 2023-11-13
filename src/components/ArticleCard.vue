@@ -1,7 +1,7 @@
 <template>
   <li>
     <RouterLink :to="'/articles/' + article.article_id"
-      class="bg-white border-[#cccccc] hover:border-[#8a8a8b] border-[1px] rounded-md grid grid-cols-[40px,600px]">
+      class="bg-white border-[#cccccc] hover:border-[#8a8a8b] border-[1px] rounded-md grid grid-cols-[40px,800px] lg:grid-cols-[40px,600px]">
       <div class="col-span-1 bg-[#f8f9fa] rounded-l-md flex flex-col items-center justify-start p-2">
         <button>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="green" stroke-width="2"
