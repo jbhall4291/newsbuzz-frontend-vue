@@ -30,6 +30,7 @@ export const getArticleById = (article_id) => {
 };
 
 export const getArticleComments = (article_id) => {
+  console.log("getting comments for article id:" + article_id)
   return newsAPI.get(`/articles/${article_id}/comments`).then((res) => {
     const comments = res.data.comments;
     return comments;
@@ -63,13 +64,14 @@ export const deleteComment = (comment_id) => {
   });
 };
 
-export const getAllUsers = (article_id) => {
+export const getAllUsers = () => {
 
   return newsAPI.get(`/users`).then((res) => {
     const allUsers = res.data.allUsers;
     return allUsers;
   });
 };
+
 
 export const postArticle = (
   loggedInUser,

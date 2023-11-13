@@ -19,24 +19,13 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue'
 
-export default {
-  setup() {
-    const searchTerm = ref("")
+const searchTerm = ref("")
 
-    const handleSearch = () => {
-      
-      
-      alert(`Searching for: ${searchTerm.value}`);
-    }
-
-    
-    return {
-      searchTerm,
-      handleSearch
-    }
-  }
+const handleSearch = () => {  
+  alert(`Searching for: ${searchTerm.value}`);
 }
+
 </script>
